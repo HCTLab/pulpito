@@ -1,0 +1,44 @@
+[submodule "rtl/axi2apb"]
+	path = rtl/axi2apb
+	url = https://github.com/pulp-platform/axi2apb
+	branch = pulpinov1
+[submodule "rtl/axi_mem_if_DP"]
+	path = rtl/axi_mem_if_DP
+	url = https://github.com/pulp-platform/axi_mem_if_DP
+	branch = pulpinov1
+[submodule "rtl/axi_node"]
+	path = rtl/axi_node
+	url = https://github.com/pulp-platform/axi_node
+	branch = pulpinov1
+[submodule "rtl/axi_slice"]
+	path = rtl/axi_slice
+	url = https://github.com/pulp-platform/axi_slice
+	branch = pulpinov1
+[submodule "rtl/axi_slice_dc"]
+	path = rtl/axi_slice_dc
+	url = https://github.com/pulp-platform/axi_slice_dc
+	branch = pulpinov1
+[submodule "rtl/axi_spi_master"]
+	path = rtl/axi_spi_master
+	url = https://github.com/pulp-platform/axi_spi_master
+	branch = pulpinov1
+[submodule "rtl/axi_spi_slave"]
+	path = rtl/axi_spi_slave
+	url = https://github.com/pulp-platform/axi_spi_slave
+	branch = pulpinov1
+[submodule "rtl/core2axi"]
+	path = rtl/core2axi
+	url = https://github.com/pulp-platform/core2axi
+	branch = pulpinov1
+[submodule "rtl/adv_dbg_if"]
+	path = rtl/adv_dbg_if
+	url = https://github.com/pulp-platform/adv_dbg_if
+	branch = pulpinov1
+[submodule "rtl/riscv"]
+	path = rtl/riscv
+	url = https://github.com/pulp-platform/riscv
+	branch = pulpinov1
+[submodule "rtl/fpu"]
+	path = rtl/fpu
+	url = https://github.com/pulp-platform/fpu
+	branch = pulpinov1
