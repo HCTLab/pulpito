@@ -46,3 +46,39 @@
 	path = rtl/apb_node
 	url = https://github.com/pulp-platform/apb_node
 	branch = pulpitov1
+[submodule "rtl/apb_uart"]
+	path = rtl/apb_uart
+	url = https://github.com/pulp-platform/apb_uart
+	branch = pulpinov1
+[submodule "rtl/apb_gpio"]
+	path = rtl/apb_gpio
+	url = https://github.com/pulp-platform/apb_gpio
+	branch = pulpinov1
+[submodule "rtl/apb_spi_master"]
+	path = rtl/apb_spi_master
+	url = https://github.com/pulp-platform/apb_spi_master
+	branch = pulpinov1
+[submodule "rtl/apb_timer"]
+	path = rtl/apb_timer
+	url = https://github.com/pulp-platform/apb_timer
+	branch = pulpinov1
+[submodule "rtl/apb_event_unit"]
+	path = rtl/apb_event_unit
+	url = https://github.com/pulp-platform/apb_event_unit
+	branch = pulpinov1
+[submodule "rtl/apb_i2c"]
+	path = rtl/apb_i2c
+	url = https://github.com/pulp-platform/apb_i2c
+	branch = pulpinov1
+[submodule "rtl/apb_fll_if"]
+	path = rtl/apb_fll_if
+	url = https://github.com/pulp-platform/apb_fll_if
+	branch = pulpinov1
+[submodule "rtl/apb_pulpino"]
+	path = rtl/apb_pulpino
+	url = https://github.com/pulp-platform/apb_pulpino
+	branch = pulpinov1
+[submodule "rtl/apb2per"]
+	path = rtl/apb2per
+	url = https://github.com/pulp-platform/apb2per
+	branch = pulpinov1
