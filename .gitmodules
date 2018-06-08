@@ -42,3 +42,7 @@
 	path = rtl/fpu
 	url = https://github.com/pulp-platform/fpu
 	branch = pulpinov1
+[submodule "rtl/apb_node"]
+	path = rtl/apb_node
+	url = https://github.com/pulp-platform/apb_node
+	branch = pulpitov1
