@@ -34,8 +34,8 @@
 	path = rtl/adv_dbg_if
 	url = https://github.com/pulp-platform/adv_dbg_if
 	branch = pulpinov1
-[submodule "rtl/riscv"]
-	path = rtl/riscv
+[submodule "rtl/riscy"]
+	path = rtl/riscy
 	url = https://github.com/pulp-platform/riscv
 	branch = pulpinov1
 [submodule "rtl/fpu"]
