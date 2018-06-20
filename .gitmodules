@@ -78,3 +78,11 @@
 	path = rtl/apb2per
 	url = https://github.com/pulp-platform/apb2per
 	branch = pulpinov1
+[submodule "rtl/riscy"]
+	path = rtl/riscy
+	url = https://github.com/pulp-platform/riscv
+	branch = pulpinov1
+[submodule "rtl/zriscy"]
+	path = rtl/zriscy
+	url = https://github.com/pulp-platform/zero-riscy
+	branch = pulpinov1
