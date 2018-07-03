@@ -1,0 +1,4575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com"
+		xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<spirit:vendor>xilinx.com</spirit:vendor>
+	<spirit:library>user</spirit:library>
+	<spirit:name>zynq_ps</spirit:name>
+	<spirit:version>1.0</spirit:version>
+	<spirit:busInterfaces>
+		<spirit:busInterface>
+			<spirit:name>M_AXI_GP</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="aximm"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="aximm_rtl"
+					spirit:version="1.0"/>
+			<spirit:master>
+				<spirit:addressSpaceRef spirit:addressSpaceRef="M_AXI_GP">
+					<spirit:baseAddress spirit:format="bitString">0x43C00000</spirit:baseAddress>
+				</spirit:addressSpaceRef>
+			</spirit:master>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awid</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">11</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awaddr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWLEN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awlen</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">7</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWSIZE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awsize</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWBURST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awburst</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWLOCK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awlock</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWCACHE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awcache</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWPROT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awprot</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWREGION</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awregion</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWQOS</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awqos</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_awready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WDATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_wdata</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WSTRB</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_wstrb</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WLAST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_wlast</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_wvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_wready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_bid</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">11</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BRESP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_bresp</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_bvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_bready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arid</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">11</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_araddr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARLEN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arlen</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">7</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARSIZE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arsize</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARBURST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arburst</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARLOCK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arlock</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARCACHE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arcache</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARPROT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arprot</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARREGION</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arregion</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARQOS</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arqos</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_arready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_rid</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">11</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RDATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_rdata</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RRESP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_rresp</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RLAST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_rlast</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_rvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>M_AXI_GP_rready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>DATA_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.DATA_WIDTH">32</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>PROTOCOL</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.PROTOCOL">AXI4</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ID_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.ID_WIDTH">12</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ADDR_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.ADDR_WIDTH">32</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>AWUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.AWUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ARUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.ARUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>WUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.WUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>RUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.RUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>BUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.BUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>READ_WRITE_MODE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.READ_WRITE_MODE">READ_WRITE</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_BURST</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_BURST">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_LOCK</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_LOCK">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_PROT</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_PROT">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_CACHE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_CACHE">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_QOS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_QOS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_REGION</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_REGION">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_WSTRB</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_WSTRB">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_BRESP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_BRESP">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_RRESP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.HAS_RRESP">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.SUPPORTS_NARROW_BURST">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.NUM_READ_OUTSTANDING">8</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.NUM_WRITE_OUTSTANDING">8</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>MAX_BURST_LENGTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.MAX_BURST_LENGTH">16</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_READ_THREADS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.NUM_READ_THREADS">4</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_WRITE_THREADS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.NUM_WRITE_THREADS">4</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.RUSER_BITS_PER_BYTE">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GP.WUSER_BITS_PER_BYTE">0</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>FIXED_IO</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="display_processing_system7"
+					spirit:name="fixedio"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="display_processing_system7"
+					spirit:name="fixedio_rtl"
+					spirit:version="1.0"/>
+			<spirit:master/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>MIO</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FIXED_IO_mio</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">53</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DDR_VRN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FIXED_IO_ddr_vrn</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DDR_VRP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FIXED_IO_ddr_vrp</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>PS_SRSTB</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FIXED_IO_ps_srstb</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>PS_CLK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FIXED_IO_ps_clk</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>PS_PORB</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FIXED_IO_ps_porb</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>S_AXI_ACP</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="aximm"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="aximm_rtl"
+					spirit:version="1.0"/>
+			<spirit:slave>
+				<spirit:memoryMapRef spirit:memoryMapRef="S_AXI_ACP"/>
+			</spirit:slave>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awaddr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWLEN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awlen</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">7</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWSIZE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awsize</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWBURST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awburst</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWLOCK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awlock</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWCACHE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awcache</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWPROT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awprot</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWREGION</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awregion</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWQOS</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awqos</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_awready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WDATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_wdata</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WSTRB</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_wstrb</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WLAST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_wlast</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_wvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_wready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BRESP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_bresp</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_bvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_bready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_araddr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARLEN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arlen</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">7</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARSIZE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arsize</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARBURST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arburst</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARLOCK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arlock</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARCACHE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arcache</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARPROT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arprot</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARREGION</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arregion</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARQOS</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arqos</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_arready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RDATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_rdata</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RRESP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_rresp</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RLAST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_rlast</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_rvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_ACP_rready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>DATA_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.DATA_WIDTH">32</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>PROTOCOL</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.PROTOCOL">AXI4</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ID_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.ID_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ADDR_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.ADDR_WIDTH">32</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>AWUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.AWUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ARUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.ARUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>WUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.WUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>RUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.RUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>BUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.BUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>READ_WRITE_MODE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.READ_WRITE_MODE">READ_WRITE</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_BURST</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_BURST">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_LOCK</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_LOCK">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_PROT</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_PROT">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_CACHE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_CACHE">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_QOS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_QOS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_REGION</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_REGION">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_WSTRB</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_WSTRB">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_BRESP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_BRESP">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_RRESP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_RRESP">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.SUPPORTS_NARROW_BURST">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_READ_OUTSTANDING">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_WRITE_OUTSTANDING">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>MAX_BURST_LENGTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.MAX_BURST_LENGTH">256</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_READ_THREADS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_READ_THREADS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_WRITE_THREADS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_WRITE_THREADS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.RUSER_BITS_PER_BYTE">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACP.WUSER_BITS_PER_BYTE">0</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>DDR</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="ddrx"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="ddrx_rtl"
+					spirit:version="1.0"/>
+			<spirit:master/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CAS_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_cas_n</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CKE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_cke</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CK_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_ck_n</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CK_P</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_ck_p</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CS_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_cs_n</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RESET_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_reset_n</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ODT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_odt</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RAS_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_ras_n</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WE_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_we_n</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_ba</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_addr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">14</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DM</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_dm</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DQ</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_dq</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DQS_N</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_dqs_n</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DQS_P</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>DDR_dqs_p</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>TIMEPERIOD_PS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.TIMEPERIOD_PS">1250</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>MEMORY_TYPE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.MEMORY_TYPE">COMPONENTS</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>MEMORY_PART</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.MEMORY_PART"/>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>DATA_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.DATA_WIDTH">8</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>CS_ENABLED</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.CS_ENABLED">true</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>DATA_MASK_ENABLED</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.DATA_MASK_ENABLED">true</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>SLOT</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.SLOT">Single</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>CUSTOM_PARTS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.CUSTOM_PARTS"/>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>MEM_ADDR_MAP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.MEM_ADDR_MAP">ROW_COLUMN_BANK</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>BURST_LENGTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.BURST_LENGTH">8</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>AXI_ARBITRATION_SCHEME</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.AXI_ARBITRATION_SCHEME">TDM</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>CAS_LATENCY</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.CAS_LATENCY">11</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>CAS_WRITE_LATENCY</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.DDR.CAS_WRITE_LATENCY">11</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>S_AXI_GP</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="aximm"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="aximm_rtl"
+					spirit:version="1.0"/>
+			<spirit:slave>
+				<spirit:memoryMapRef spirit:memoryMapRef="S_AXI_GP"/>
+			</spirit:slave>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awaddr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWLEN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awlen</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">7</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWSIZE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awsize</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWBURST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awburst</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWLOCK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awlock</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWCACHE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awcache</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWPROT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awprot</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWREGION</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awregion</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWQOS</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awqos</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>AWREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_awready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WDATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_wdata</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WSTRB</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_wstrb</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WLAST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_wlast</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_wvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>WREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_wready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BRESP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_bresp</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_bvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>BREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_bready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARADDR</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_araddr</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARLEN</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arlen</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">7</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARSIZE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arsize</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARBURST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arburst</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARLOCK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arlock</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARCACHE</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arcache</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARPROT</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arprot</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">2</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARREGION</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arregion</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARQOS</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arqos</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">3</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ARREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_arready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RDATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_rdata</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">31</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RRESP</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_rresp</spirit:name>
+						<spirit:vector>
+							<spirit:left spirit:format="long">1</spirit:left>
+							<spirit:right spirit:format="long">0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RLAST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_rlast</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RVALID</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_rvalid</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RREADY</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>S_AXI_GP_rready</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>DATA_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.DATA_WIDTH">32</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>PROTOCOL</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.PROTOCOL">AXI4</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ID_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.ID_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ADDR_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.ADDR_WIDTH">32</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>AWUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.AWUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ARUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.ARUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>WUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.WUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>RUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.RUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>BUSER_WIDTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.BUSER_WIDTH">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>READ_WRITE_MODE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.READ_WRITE_MODE">READ_WRITE</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_BURST</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_BURST">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_LOCK</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_LOCK">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_PROT</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_PROT">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_CACHE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_CACHE">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_QOS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_QOS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_REGION</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_REGION">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_WSTRB</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_WSTRB">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_BRESP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_BRESP">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>HAS_RRESP</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.HAS_RRESP">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.SUPPORTS_NARROW_BURST">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.NUM_READ_OUTSTANDING">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.NUM_WRITE_OUTSTANDING">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>MAX_BURST_LENGTH</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.MAX_BURST_LENGTH">256</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_READ_THREADS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.NUM_READ_THREADS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>NUM_WRITE_THREADS</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.NUM_WRITE_THREADS">1</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.RUSER_BITS_PER_BYTE">0</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_GP.WUSER_BITS_PER_BYTE">0</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>CLK.EXT_CLK_IN</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="clock"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="clock_rtl"
+					spirit:version="1.0"/>
+			<spirit:slave/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CLK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>EXT_CLK_IN</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>FREQ_HZ</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.EXT_CLK_IN.FREQ_HZ">100000000</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>PHASE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.EXT_CLK_IN.PHASE">0.000</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>ASSOCIATED_BUSIF</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.EXT_CLK_IN.ASSOCIATED_BUSIF">M_AXI_GP:S_AXI_ACP:S_AXI_GP</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>RST.FCLK_RESET0_N</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="reset"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="reset_rtl"
+					spirit:version="1.0"/>
+			<spirit:master/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>RST</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>FCLK_RESET0_N</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>POLARITY</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.RST.FCLK_RESET0_N.POLARITY">ACTIVE_LOW</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>CLK.CFLK_CLK0</spirit:name>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="clock"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="clock_rtl"
+					spirit:version="1.0"/>
+			<spirit:master/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CLK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>CFLK_CLK0</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:parameters>
+				<spirit:parameter>
+					<spirit:name>FREQ_HZ</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CFLK_CLK0.FREQ_HZ">50000000</spirit:value>
+				</spirit:parameter>
+				<spirit:parameter>
+					<spirit:name>PHASE</spirit:name>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CFLK_CLK0.PHASE">0.000</spirit:value>
+				</spirit:parameter>
+			</spirit:parameters>
+		</spirit:busInterface>
+	</spirit:busInterfaces>
+	<spirit:addressSpaces>
+		<spirit:addressSpace>
+			<spirit:name>M_AXI_GP</spirit:name>
+			<spirit:range>64K</spirit:range>
+			<spirit:width spirit:format="long">32</spirit:width>
+		</spirit:addressSpace>
+	</spirit:addressSpaces>
+	<spirit:memoryMaps>
+		<spirit:memoryMap>
+			<spirit:name>S_AXI_ACP</spirit:name>
+			<spirit:description>{SEG_processing_system7_0_ACP_DDR_LOWOCM;/processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM;0x0000000;256M;xilinx.com:ip:processing_system7:5.5;memory}{,SEG_processing_system7_0_ACP_M_AXI_GP0;/processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0;0x40000000;256M;xilinx.com:ip:processing_system7:5.5;register}{,SEG_processing_system7_0_ACP_IOP;/processing_system7_0/S_AXI_ACP/ACP_IOP;0xE0000000;4M;xilinx.com:ip:processing_system7:5.5;register}{,SEG_processing_system7_0_ACP_QSPI_LINEAR;/processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR;0xFC000000;16M;xilinx.com:ip:processing_system7:5.5;memory}</spirit:description>
+			<spirit:addressBlock>
+				<spirit:name>Mem0</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0x0000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x10000000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>memory</spirit:usage>
+			</spirit:addressBlock>
+			<spirit:addressBlock>
+				<spirit:name>Reg0</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0x40000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x10000000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>register</spirit:usage>
+			</spirit:addressBlock>
+			<spirit:addressBlock>
+				<spirit:name>Reg1</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0xE0000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x00400000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>register</spirit:usage>
+			</spirit:addressBlock>
+			<spirit:addressBlock>
+				<spirit:name>Mem1</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0xFC000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x01000000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>memory</spirit:usage>
+			</spirit:addressBlock>
+		</spirit:memoryMap>
+		<spirit:memoryMap>
+			<spirit:name>S_AXI_GP</spirit:name>
+			<spirit:description>{SEG_processing_system7_0_GP0_DDR_LOWOCM;/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM;0x0000000;256M;xilinx.com:ip:processing_system7:5.5;memory}{,SEG_processing_system7_0_GP0_M_AXI_GP0;/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0;0x40000000;256M;xilinx.com:ip:processing_system7:5.5;register}{,SEG_processing_system7_0_GP0_IOP;/processing_system7_0/S_AXI_GP0/GP0_IOP;0xE0000000;4M;xilinx.com:ip:processing_system7:5.5;register}{,SEG_processing_system7_0_GP0_QSPI_LINEAR;/processing_system7_0/S_AXI_GP0/GP0_QSPI_LINEAR;0xFC000000;16M;xilinx.com:ip:processing_system7:5.5;memory}</spirit:description>
+			<spirit:addressBlock>
+				<spirit:name>Mem0</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0x0000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x10000000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>memory</spirit:usage>
+			</spirit:addressBlock>
+			<spirit:addressBlock>
+				<spirit:name>Reg0</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0x40000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x10000000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>register</spirit:usage>
+			</spirit:addressBlock>
+			<spirit:addressBlock>
+				<spirit:name>Reg1</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0xE0000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x00400000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>register</spirit:usage>
+			</spirit:addressBlock>
+			<spirit:addressBlock>
+				<spirit:name>Mem1</spirit:name>
+				<spirit:baseAddress spirit:format="bitString"
+						spirit:resolve="generated">0xFC000000</spirit:baseAddress>
+				<spirit:range spirit:format="bitString">0x01000000</spirit:range>
+				<spirit:width spirit:format="long">32</spirit:width>
+				<spirit:usage>memory</spirit:usage>
+			</spirit:addressBlock>
+		</spirit:memoryMap>
+	</spirit:memoryMaps>
+	<spirit:model>
+		<spirit:views>
+			<spirit:view>
+				<spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+				<spirit:displayName>Synthesis</spirit:displayName>
+				<spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+				<spirit:language>Verilog</spirit:language>
+				<spirit:modelName>zynq_ps</spirit:modelName>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_processing_system7_5_5__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_proc_sys_reset_5_0__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_axi_protocol_converter_2_1__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_axi_dwidth_converter_2_1__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+			</spirit:view>
+			<spirit:view>
+				<spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+				<spirit:displayName>Simulation</spirit:displayName>
+				<spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+				<spirit:language>Verilog</spirit:language>
+				<spirit:modelName>zynq_ps</spirit:modelName>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_processing_system7_5_5__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_proc_sys_reset_5_0__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axi_protocol_converter_2_1__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axi_dwidth_converter_2_1__ref_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+			</spirit:view>
+			<spirit:view>
+				<spirit:name>xilinx_xpgui</spirit:name>
+				<spirit:displayName>UI Layout</spirit:displayName>
+				<spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+			</spirit:view>
+		</spirit:views>
+		<spirit:ports>
+			<spirit:port>
+				<spirit:name>CFLK_CLK0</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_addr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">14</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_ba</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_cas_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_ck_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_ck_p</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_cke</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_cs_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_dm</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_dq</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_dqs_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_dqs_p</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_odt</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_ras_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_reset_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>DDR_we_n</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>EXT_CLK_IN</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FCLK_RESET0_N</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FIXED_IO_ddr_vrn</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FIXED_IO_ddr_vrp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FIXED_IO_mio</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">53</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FIXED_IO_ps_clk</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FIXED_IO_ps_porb</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>FIXED_IO_ps_srstb</spirit:name>
+				<spirit:wire>
+					<spirit:direction>inout</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_araddr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arburst</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arcache</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">11</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arlen</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">7</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arlock</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">0</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arprot</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arqos</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arregion</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arsize</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_arvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awaddr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awburst</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awcache</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">11</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awlen</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">7</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awlock</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">0</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awprot</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awqos</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awregion</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awsize</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_awvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_bid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">11</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_bready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_bresp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_bvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_rdata</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_rid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">11</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_rlast</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_rready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_rresp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_rvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_wdata</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_wlast</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_wready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_wstrb</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>M_AXI_GP_wvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_araddr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arburst</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arcache</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arlen</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">7</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arlock</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">0</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arprot</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arqos</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arregion</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arsize</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_arvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awaddr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awburst</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awcache</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awlen</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">7</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awlock</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">0</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awprot</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awqos</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awregion</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awsize</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_awvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_bready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_bresp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_bvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_rdata</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_rlast</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_rready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_rresp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_rvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_wdata</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_wlast</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_wready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_wstrb</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_ACP_wvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_araddr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arburst</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arcache</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arlen</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">7</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arlock</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">0</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arprot</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arqos</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arregion</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arsize</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_arvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awaddr</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awburst</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awcache</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awlen</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">7</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awlock</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">0</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awprot</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awqos</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awregion</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awsize</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">2</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_awvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_bready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_bresp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_bvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_rdata</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_rlast</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_rready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_rresp</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_rvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_wdata</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">31</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_wlast</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_wready</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_wstrb</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>S_AXI_GP_wvalid</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+		</spirit:ports>
+	</spirit:model>
+	<spirit:fileSets>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_processing_system7_0_0/zynq_ps_processing_system7_0_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_processing_system7_0</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_proc_sys_reset_0_0/zynq_ps_proc_sys_reset_0_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_proc_sys_reset_0</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_pc_2/zynq_ps_auto_pc_2.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_2/s00_couplers/auto_pc</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_pc_1/zynq_ps_auto_pc_1.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_1/s00_couplers/auto_pc</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_pc_0/zynq_ps_auto_pc_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_0/s00_couplers/auto_pc</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_us_0/zynq_ps_auto_us_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_0/s00_couplers/auto_us</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_ooc.xdc</spirit:name>
+				<spirit:userFileType>xdc</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>SCOPED_TO_REF_zynq_ps</spirit:userFileType>
+				<spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+				<spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+				<spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps.hwdef</spirit:name>
+				<spirit:userFileType>hwdef</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps.v</spirit:name>
+				<spirit:fileType>verilogSource</spirit:fileType>
+				<spirit:userFileType>CHECKSUM_f40cb4e0</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_processing_system7_5_5__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xsi:type="xilinx:componentRefType"
+							xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="processing_system7"
+							xilinx:version="5.5">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_proc_sys_reset_5_0__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="proc_sys_reset"
+							xilinx:version="5.0">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_axi_protocol_converter_2_1__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="axi_protocol_converter"
+							xilinx:version="2.1">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_axi_dwidth_converter_2_1__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="axi_dwidth_converter"
+							xilinx:version="2.1">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_processing_system7_0_0/zynq_ps_processing_system7_0_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_processing_system7_0</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_proc_sys_reset_0_0/zynq_ps_proc_sys_reset_0_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_proc_sys_reset_0</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_pc_2/zynq_ps_auto_pc_2.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_2/s00_couplers/auto_pc</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_pc_1/zynq_ps_auto_pc_1.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_1/s00_couplers/auto_pc</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_pc_0/zynq_ps_auto_pc_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_0/s00_couplers/auto_pc</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps_auto_us_0/zynq_ps_auto_us_0.xci</spirit:name>
+				<spirit:userFileType>xci</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:userFileType>CELL_NAME_axi_interconnect_0/s00_couplers/auto_us</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps.hwdef</spirit:name>
+				<spirit:userFileType>hwdef</spirit:userFileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+			<spirit:file>
+				<spirit:name>src/zynq_ps.v</spirit:name>
+				<spirit:fileType>verilogSource</spirit:fileType>
+				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+				<spirit:define>
+					<spirit:name>processing_order</spirit:name>
+					<spirit:value>early</spirit:value>
+				</spirit:define>
+			</spirit:file>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_processing_system7_5_5__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xsi:type="xilinx:componentRefType"
+							xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="processing_system7"
+							xilinx:version="5.5">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_proc_sys_reset_5_0__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="proc_sys_reset"
+							xilinx:version="5.0">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axi_protocol_converter_2_1__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="axi_protocol_converter"
+							xilinx:version="2.1">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axi_dwidth_converter_2_1__ref_view_fileset</spirit:name>
+			<spirit:vendorExtensions>
+				<xilinx:subCoreRef>
+					<xilinx:componentRef xilinx:vendor="xilinx.com"
+							xilinx:library="ip"
+							xilinx:name="axi_dwidth_converter"
+							xilinx:version="2.1">
+						<xilinx:mode xilinx:name="create_mode"/>
+					</xilinx:componentRef>
+				</xilinx:subCoreRef>
+			</spirit:vendorExtensions>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+			<spirit:file>
+				<spirit:name>xgui/zynq_ps_v1_0.tcl</spirit:name>
+				<spirit:fileType>tclSource</spirit:fileType>
+				<spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+				<spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+			</spirit:file>
+		</spirit:fileSet>
+	</spirit:fileSets>
+	<spirit:description>zynq_ps_v1_0</spirit:description>
+	<spirit:parameters>
+		<spirit:parameter>
+			<spirit:name>Component_Name</spirit:name>
+			<spirit:value spirit:resolve="user"
+					spirit:id="PARAM_VALUE.Component_Name"
+					spirit:order="1">zynq_ps_v1_0</spirit:value>
+		</spirit:parameter>
+	</spirit:parameters>
+	<spirit:vendorExtensions>
+		<xilinx:coreExtensions>
+			<xilinx:supportedFamilies>
+				<xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+			</xilinx:supportedFamilies>
+			<xilinx:taxonomies>
+				<xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+			</xilinx:taxonomies>
+			<xilinx:displayName>zynq_ps_v1_0</xilinx:displayName>
+			<xilinx:definitionSource>IPI</xilinx:definitionSource>
+			<xilinx:coreRevision>1</xilinx:coreRevision>
+			<xilinx:coreCreationDateTime>2018-07-02T08:23:45Z</xilinx:coreCreationDateTime>
+			<xilinx:configElementInfos>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CFLK_CLK0.FREQ_HZ"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.ADDR_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.ARUSER_WIDTH"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.AWUSER_WIDTH"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.BUSER_WIDTH"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.DATA_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_BRESP"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_BURST"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_CACHE"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_LOCK"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_PROT"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_QOS"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_REGION"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_RRESP"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.HAS_WSTRB"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.ID_WIDTH"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.MAX_BURST_LENGTH"
+						xilinx:valueSource="ip_propagated"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.NUM_READ_OUTSTANDING"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.NUM_READ_THREADS"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.NUM_WRITE_OUTSTANDING"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.NUM_WRITE_THREADS"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.PROTOCOL"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.READ_WRITE_MODE"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.RUSER_WIDTH"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.SUPPORTS_NARROW_BURST"
+						xilinx:valueSource="ip_propagated"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP.WUSER_WIDTH"
+						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.ADDR_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.ARUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.AWUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.BUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.DATA_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_BRESP"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_BURST"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_CACHE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_LOCK"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_PROT"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_QOS"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_REGION"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_RRESP"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.HAS_WSTRB"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.ID_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.MAX_BURST_LENGTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_READ_OUTSTANDING"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_READ_THREADS"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_WRITE_OUTSTANDING"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.NUM_WRITE_THREADS"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.PROTOCOL"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.READ_WRITE_MODE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.RUSER_BITS_PER_BYTE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.RUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.SUPPORTS_NARROW_BURST"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.WUSER_BITS_PER_BYTE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACP.WUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.ADDR_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.ARUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.AWUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.BUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.DATA_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_BRESP"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_BURST"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_CACHE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_LOCK"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_PROT"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_QOS"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_REGION"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_RRESP"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.HAS_WSTRB"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.ID_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.MAX_BURST_LENGTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.NUM_READ_OUTSTANDING"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.NUM_READ_THREADS"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.NUM_WRITE_OUTSTANDING"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.NUM_WRITE_THREADS"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.PROTOCOL"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.READ_WRITE_MODE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.RUSER_BITS_PER_BYTE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.RUSER_WIDTH"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.SUPPORTS_NARROW_BURST"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.WUSER_BITS_PER_BYTE"
+						xilinx:valueSource="user"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_GP.WUSER_WIDTH"
+						xilinx:valueSource="user"/>
+			</xilinx:configElementInfos>
+		</xilinx:coreExtensions>
+		<xilinx:packagingInfo>
+			<xilinx:xilinxVersion>2017.1</xilinx:xilinxVersion>
+		</xilinx:packagingInfo>
+	</spirit:vendorExtensions>
+</spirit:component>
