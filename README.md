@@ -139,7 +139,7 @@ see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* This work is one of the basic pieces for my thesis. Thankss to (Javier Garrido)[http://www.hctlab.com/people/person.aspx?user=javier.garrido] for his support and help.
+* This work is one of the basic pieces from my thesis. Thanks to [Javier Garrido](http://www.hctlab.com/people/person.aspx?user=javier.garrido) for his support and help.
 * RiscV ecosystem is clearly a new paradigm for embedded systems due to its freedom.
 * However my thesis is based on the idea that proprietary or free ISA can coexist in a same silicon and each ISA can take advantage of the other.
 * (Maybe) Hybrid systems will be considered common architectures in the future...
