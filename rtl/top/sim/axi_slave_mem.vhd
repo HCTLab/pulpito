@@ -1,16 +1,26 @@
+-- Copyright 2018 EPS Universidad Autónoma de Madrid.
+-- Copyright and related rights are licensed under the Solderpad Hardware
+-- License, Version 0.51 (the “License”); you may not use this file except in
+-- compliance with the License.  You may obtain a copy of the License at
+-- http://solderpad.org/licenses/SHL-0.51. Unless required by applicable law
+-- or agreed to in writing, software, hardware and materials distributed under
+-- this License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR
+-- CONDITIONS OF ANY KIND, either express or implied. See the License for the
+-- specific language governing permissions and limitations under the License.
+
 library ieee;
 use ieee.std_logic_1164.all;
---use ieee.std_logic_arith.all;
---use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
+use std.textio.all;
+use ieee.std_logic_textio.all;
 
-entity axi_slave_memory is
+entity axi_slave_mem is
     generic
     (
-        C_MEM_SIZE         : integer := 1024;
-        -- AXI Parameters
-        C_S_AXI_DATA_WIDTH : integer := 32;
-        C_S_AXI_ADDR_WIDTH : integer := 32
+        C_MEM_SIZE                     : integer := 1024;
+        C_MEM_FILE                     : string  := "";
+        C_S_AXI_DATA_WIDTH             : integer := 32;
+        C_S_AXI_ADDR_WIDTH             : integer := 32
     );
     port
     (
@@ -34,31 +44,47 @@ entity axi_slave_memory is
         S_AXI_BVALID                   : out std_logic;
         S_AXI_BREADY                   : in  std_logic
     );
-end entity axi_slave_memory;
+end axi_slave_mem;
 
 ------------------------------------------------------------------------------
 -- Architecture section
 ------------------------------------------------------------------------------
 
-architecture IMP of axi_slave_memory is
+architecture rtl of axi_slave_mem is
 
    -- Type declarations
    type main_fsm_type is (reset, idle, read_transaction_in_progress, write_transaction_in_progress, complete);
    type register_array_type is array (C_MEM_SIZE-1 downto 0) of std_logic_vector(31 downto 0);
 
+   impure function InitRomFromFile (RomFileName : in string) return register_array_type is
+       FILE romfile : text;
+       variable status : file_open_status;
+       variable RomFileLine : line;
+       variable rom : register_array_type := (others => x"00000000");
+       variable i : integer;
+   begin
+       file_open(status, romfile, RomFileName, READ_MODE);
+       if status = open_ok then
+           i := 0;
+           while not endfile(romfile) loop
+               readline(romfile, RomFileLine);
+               hread(RomFileLine, rom(i));
+               i := i + 1;
+           end loop;
+           file_close(romfile);
+       else
+           report "ROM file not found/defined. Filling memory with zeroes..." severity NOTE;
+       end if;
+       return rom;
+   end function;
+
    -- Signal declarations
    signal local_address : integer range 0 to 2**C_S_AXI_ADDR_WIDTH;
-   signal local_address_valid : std_logic;
-
-   signal register_array : register_array_type := (others => x"00000000");
-   signal register_address_valid : std_logic_vector(C_MEM_SIZE-1 downto 0);
-
+   signal register_array : register_array_type := InitRomFromFile(C_MEM_FILE);
    signal combined_S_AXI_AWVALID_S_AXI_ARVALID : std_logic_vector(1 downto 0);
    signal Local_Reset : std_logic;
    signal current_state, next_state : main_fsm_type;
-   signal write_enable_registers : std_logic;
-   signal send_read_data_to_AXI : std_logic;
-
+   
 begin
 
    Local_Reset <= not S_AXI_ARESETN;
@@ -66,27 +92,25 @@ begin
 
    state_machine_update : process (S_AXI_ACLK)
    begin
-       if S_AXI_ACLK'event and S_AXI_ACLK = '1' then
-           if Local_Reset = '1' then
-               current_state <= reset;
-           else
-               current_state <= next_state;
-           end if;
-       end if;
+      if S_AXI_ACLK'event and S_AXI_ACLK = '1' then
+         if Local_Reset = '1' then
+            current_state <= reset;
+         else
+            current_state <= next_state;
+         end if;
+      end if;
    end process;
 
-   state_machine_decisions : process (current_state, combined_S_AXI_AWVALID_S_AXI_ARVALID, S_AXI_ARVALID, S_AXI_RREADY, S_AXI_AWVALID, S_AXI_WVALID, S_AXI_BREADY, local_address, local_address_valid)
+   state_machine_decisions : process (current_state, combined_S_AXI_AWVALID_S_AXI_ARVALID, S_AXI_ARVALID, S_AXI_RREADY, S_AXI_AWVALID, S_AXI_WVALID, S_AXI_BREADY)
    begin
-       S_AXI_ARREADY <= '0';
-       S_AXI_RRESP <= "--";
-       S_AXI_RVALID <= '0';
-       S_AXI_WREADY <= '0';
-       S_AXI_BRESP <= "--";
-       S_AXI_BVALID <= '0';
-       S_AXI_WREADY <= '0';
-       S_AXI_AWREADY <= '0';
-       write_enable_registers <= '0';
-       send_read_data_to_AXI <= '0';
+      S_AXI_ARREADY <= '0';
+      S_AXI_RRESP <= "--";
+      S_AXI_RVALID <= '0';
+      S_AXI_WREADY <= '0';
+      S_AXI_BRESP <= "--";
+      S_AXI_BVALID <= '0';
+      S_AXI_WREADY <= '0';
+      S_AXI_AWREADY <= '0';
 
       case current_state is
          when reset =>
@@ -95,31 +119,41 @@ begin
          when idle =>
             next_state <= idle;
             case combined_S_AXI_AWVALID_S_AXI_ARVALID is
-               when "01" => next_state <= read_transaction_in_progress;
-               when "10" => next_state <= write_transaction_in_progress;
+               when "01" => 
+                  next_state <= read_transaction_in_progress;
+                  local_address <= to_integer(unsigned(S_AXI_ARADDR(C_S_AXI_ADDR_WIDTH-1 downto 0)));
+               when "10" => 
+                  next_state <= write_transaction_in_progress;
+                  local_address <= to_integer(unsigned(S_AXI_AWADDR(C_S_AXI_ADDR_WIDTH-1 downto 0)));
                when others => NULL;
             end case;
 
          when read_transaction_in_progress =>
-               next_state <= read_transaction_in_progress;
-               S_AXI_ARREADY <= S_AXI_ARVALID;
-               S_AXI_RVALID <= '1';
-               S_AXI_RRESP <= "00";
-               send_read_data_to_AXI <= '1';
-               if S_AXI_RREADY = '1' then
-                   next_state <= complete;
-               end if;
+            next_state <= read_transaction_in_progress;
+            S_AXI_ARREADY <= S_AXI_ARVALID;
+            S_AXI_RVALID <= '1';
+            S_AXI_RRESP <= "00";
+            if local_address < C_MEM_SIZE*4 then
+               S_AXI_RDATA <= register_array(local_address/4);
+            end if;
+            if S_AXI_RREADY = '1' then
+               next_state <= complete;
+            end if;
 
          when write_transaction_in_progress =>
-               next_state <= write_transaction_in_progress;
-            write_enable_registers <= '1';
-               S_AXI_AWREADY <= S_AXI_AWVALID;
-               S_AXI_WREADY <= S_AXI_WVALID;
+            S_AXI_AWREADY <= S_AXI_AWVALID;
+            S_AXI_WREADY <= S_AXI_WVALID;
+            if S_AXI_WVALID = '1' then
                S_AXI_BRESP <= "00";
                S_AXI_BVALID <= '1';
-            if S_AXI_BREADY = '1' then
-                next_state <= complete;
+               if local_address < C_MEM_SIZE*4 then
+                  register_array(local_address/4) <= S_AXI_WDATA;
                end if;
+               next_state <= write_transaction_in_progress;
+            end if;
+            if S_AXI_BREADY = '1' then
+               next_state <= complete;
+            end if;
 
          when complete =>
             case combined_S_AXI_AWVALID_S_AXI_ARVALID is
@@ -132,63 +166,4 @@ begin
       end case;
    end process;
 
-   send_data_to_AXI_RDATA : process (send_read_data_to_AXI, local_address, register_array)
-   begin
-      S_AXI_RDATA <= (others => '-');
-      if (local_address_valid = '1' and send_read_data_to_AXI = '1') then
-         case (local_address) is
-            when 0 to C_MEM_SIZE*4 =>
-               S_AXI_RDATA <= register_array(local_address/4);
-            when others => NULL;
-         end case;
-      end if;
-   end process;
-
-   local_address_capture_register : process (S_AXI_ACLK)
-   begin
-      if (S_AXI_ACLK'event and S_AXI_ACLK = '1') then
-         if Local_Reset = '1' then
-             local_address <= 0;
-         else
-            if local_address_valid = '1' then
-               case (combined_S_AXI_AWVALID_S_AXI_ARVALID) is
-                  when "10" => local_address <= to_integer(unsigned(S_AXI_AWADDR(C_S_AXI_ADDR_WIDTH-1 downto 0)));
-                  when "01" => local_address <= to_integer(unsigned(S_AXI_ARADDR(C_S_AXI_ADDR_WIDTH-1 downto 0)));
-                  when others => local_address <= local_address;
-               end case;
-            end if;
-         end if;
-      end if;
-   end process;
-
-   register_process : process (S_AXI_ACLK)
-   begin
-      for i in 0 to C_MEM_SIZE-1 loop
-         if (S_AXI_ACLK'event and S_AXI_ACLK = '1') then
-            if Local_Reset = '1' then
-               register_array(i) <= x"00000000";
-            else
-               if (register_address_valid(i) = '1') then
-                  register_array(i) <= S_AXI_WDATA;
-               end if;
-            end if;
-         end if;
-      end loop;
-   end process;
-
-   address_range_analysis : process (local_address, write_enable_registers)
-   begin
-      register_address_valid <= (others => '0');
-      local_address_valid <= '1';
-
-      if write_enable_registers = '1' then
-         case (local_address) is
-            when 0 to C_MEM_SIZE*4 =>
-               register_address_valid(local_address/4) <= '1';
-            when others =>
-               local_address_valid <= '0';
-         end case;
-      end if;
-   end process;
-
-end IMP;
+end rtl;

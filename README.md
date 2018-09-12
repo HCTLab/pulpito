@@ -33,8 +33,13 @@ PULPito has the following requirements:
 
 2. Add a new ZTurn Vivado board template by copying all files from "fpga/vivado/boards/2017.1" into your Vivado execution path.
 
-3. Open Vivado and select "Tools / Run Tcl Script...". 
-   Please choose "fpga/vivado/project/pulpito.tcl" and press "OK".
+3. Open Vivado and create a new project with these steps:
+
+   A) Switch working directory where project will be created with a 'cd' TCL command:
+      > cd projects/wherever
+      
+   B) Press "Tools / Run Tcl Script...". 
+      Please choose "fpga/vivado/project/pulpito.tcl" and press "OK".
 
 4. Add the following design source file (by right-clicking "Add sources.." and then "Add or create design sources"):
    "fpga/vivado/zynq_ps/zynq_ps.bd"
@@ -111,7 +116,7 @@ To build a Vivado project from scratch, please follow next steps:
 7. Select 'pulpemu_top' as the top module to be synthesized.
    Select 'pulpsim_top' as the top module to be simulated.
 
-8. Add the component block 'fpga/vivado/zynq_ps/zynq_ps' into you project.
+8. Add the component block 'fpga/vivado/zynq_ps/zynq_ps' into you project (make a copy inside the project, avoid auto-update option)
    You can also create this design block from scratch if you preserve same interface names.
 
 9. Remove unreferenced files.

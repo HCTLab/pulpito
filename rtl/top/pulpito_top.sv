@@ -239,54 +239,54 @@ module pulpito_top
  
   //----------------------------------------------------------------------------
   
-  assign axi_master.aw_valid  = slaves[0].aw_valid  ; 
-  assign axi_master.aw_id     = slaves[0].aw_id     ; 
-  assign axi_master.aw_prot   = slaves[0].aw_prot   ; 
-  assign axi_master.aw_region = slaves[0].aw_region ; 
-  assign axi_master.aw_qos    = slaves[0].aw_qos    ; 
-  assign axi_master.aw_cache  = slaves[0].aw_cache  ; 
-  assign axi_master.aw_lock   = slaves[0].aw_lock   ; 
-  assign axi_master.aw_burst  = slaves[0].aw_burst  ; 
-  assign axi_master.aw_size   = slaves[0].aw_size   ; 
-  assign axi_master.aw_len    = slaves[0].aw_len    ; 
-  assign axi_master.aw_addr   = slaves[0].aw_addr   ; 
-  assign axi_master.aw_user   = slaves[0].aw_user   ; 
-  assign slaves[0].aw_ready   = axi_master.aw_ready ; 
+  assign acp_master.aw_valid  = slaves[0].aw_valid  ; 
+  assign acp_master.aw_id     = slaves[0].aw_id     ; 
+  assign acp_master.aw_prot   = slaves[0].aw_prot   ; 
+  assign acp_master.aw_region = slaves[0].aw_region ; 
+  assign acp_master.aw_qos    = slaves[0].aw_qos    ; 
+  assign acp_master.aw_cache  = slaves[0].aw_cache  ; 
+  assign acp_master.aw_lock   = slaves[0].aw_lock   ; 
+  assign acp_master.aw_burst  = slaves[0].aw_burst  ; 
+  assign acp_master.aw_size   = slaves[0].aw_size   ; 
+  assign acp_master.aw_len    = slaves[0].aw_len    ; 
+  assign acp_master.aw_addr   = slaves[0].aw_addr   ; 
+  assign acp_master.aw_user   = slaves[0].aw_user   ; 
+  assign slaves[0].aw_ready   = acp_master.aw_ready ; 
                                                      
-  assign axi_master.w_valid   = slaves[0].w_valid   ; 
-  assign axi_master.w_data    = slaves[0].w_data    ; 
-  assign axi_master.w_strb    = slaves[0].w_strb    ; 
-  assign axi_master.w_last    = slaves[0].w_last    ; 
-  assign axi_master.w_user    = slaves[0].w_user    ; 
-  assign slaves[0].w_ready    = axi_master.w_ready  ; 
+  assign acp_master.w_valid   = slaves[0].w_valid   ; 
+  assign acp_master.w_data    = slaves[0].w_data    ; 
+  assign acp_master.w_strb    = slaves[0].w_strb    ; 
+  assign acp_master.w_last    = slaves[0].w_last    ; 
+  assign acp_master.w_user    = slaves[0].w_user    ; 
+  assign slaves[0].w_ready    = acp_master.w_ready  ; 
                                                      
-  assign slaves[0].b_valid    = axi_master.b_valid  ; 
-  assign slaves[0].b_id       = axi_master.b_id     ; 
-  assign slaves[0].b_resp     = axi_master.b_resp   ; 
-  assign slaves[0].b_user     = axi_master.b_user   ; 
-  assign axi_master.b_ready   = slaves[0].b_ready   ; 
+  assign slaves[0].b_valid    = acp_master.b_valid  ; 
+  assign slaves[0].b_id       = acp_master.b_id     ; 
+  assign slaves[0].b_resp     = acp_master.b_resp   ; 
+  assign slaves[0].b_user     = acp_master.b_user   ; 
+  assign acp_master.b_ready   = slaves[0].b_ready   ; 
                                                      
-  assign axi_master.ar_valid  = slaves[0].ar_valid  ; 
-  assign axi_master.ar_id     = slaves[0].ar_id     ; 
-  assign axi_master.ar_prot   = slaves[0].ar_prot   ; 
-  assign axi_master.ar_region = slaves[0].ar_region ; 
-  assign axi_master.ar_qos    = slaves[0].ar_qos    ; 
-  assign axi_master.ar_cache  = slaves[0].ar_cache  ; 
-  assign axi_master.ar_lock   = slaves[0].ar_lock   ; 
-  assign axi_master.ar_burst  = slaves[0].ar_burst  ; 
-  assign axi_master.ar_size   = slaves[0].ar_size   ; 
-  assign axi_master.ar_len    = slaves[0].ar_len    ; 
-  assign axi_master.ar_addr   = slaves[0].ar_addr   ; 
-  assign axi_master.ar_user   = slaves[0].ar_user   ; 
-  assign slaves[0].ar_ready   = axi_master.ar_ready ; 
+  assign acp_master.ar_valid  = slaves[0].ar_valid  ; 
+  assign acp_master.ar_id     = slaves[0].ar_id     ; 
+  assign acp_master.ar_prot   = slaves[0].ar_prot   ; 
+  assign acp_master.ar_region = slaves[0].ar_region ; 
+  assign acp_master.ar_qos    = slaves[0].ar_qos    ; 
+  assign acp_master.ar_cache  = slaves[0].ar_cache  ; 
+  assign acp_master.ar_lock   = slaves[0].ar_lock   ; 
+  assign acp_master.ar_burst  = slaves[0].ar_burst  ; 
+  assign acp_master.ar_size   = slaves[0].ar_size   ; 
+  assign acp_master.ar_len    = slaves[0].ar_len    ; 
+  assign acp_master.ar_addr   = slaves[0].ar_addr   ; 
+  assign acp_master.ar_user   = slaves[0].ar_user   ; 
+  assign slaves[0].ar_ready   = acp_master.ar_ready ; 
                                                      
-  assign slaves[0].r_valid    = axi_master.r_valid  ; 
-  assign slaves[0].r_id       = axi_master.r_id     ; 
-  assign slaves[0].r_data     = axi_master.r_data   ; 
-  assign slaves[0].r_resp     = axi_master.r_resp   ; 
-  assign slaves[0].r_last     = axi_master.r_last   ; 
-  assign slaves[0].r_user     = axi_master.r_user   ; 
-  assign axi_master.r_ready   = slaves[0].r_ready   ; 
+  assign slaves[0].r_valid    = acp_master.r_valid  ; 
+  assign slaves[0].r_id       = acp_master.r_id     ; 
+  assign slaves[0].r_data     = acp_master.r_data   ; 
+  assign slaves[0].r_resp     = acp_master.r_resp   ; 
+  assign slaves[0].r_last     = acp_master.r_last   ; 
+  assign slaves[0].r_user     = acp_master.r_user   ; 
+  assign acp_master.r_ready   = slaves[0].r_ready   ; 
  
   //----------------------------------------------------------------------------
   // Core region
@@ -317,8 +317,8 @@ module pulpito_top
     .clock_gating_i ( clk_gate_core_int ),
     .boot_addr_i    ( boot_addr_int     ),
 
-    .instr_master   ( masters[0]        ),
-    .data_master    ( acp_master        ),
+    .instr_master   ( axi_master        ),
+    .data_master    ( masters[0]        ),
     .dbg_master     ( masters[2]        ),
     .debug          ( debug             ),
 
