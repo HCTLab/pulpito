@@ -251,7 +251,7 @@ module pulpemu_top
   // Zynq Processing System 7
   zynq_ps_wrapper  zynq_ps_wrapper_i 
   (
-    .CFLK_CLK0          (                     ),   // PLL generated clock from PS7 not used
+    .FCLK_CLK0          (                     ),   // PLL generated clock from PS7 not used
                                               
     .DDR_addr           ( DDR_addr            ),
     .DDR_ba             ( DDR_ba              ),

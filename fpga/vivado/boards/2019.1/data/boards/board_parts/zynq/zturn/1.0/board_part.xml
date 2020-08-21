@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<board_part board_name="zturn" board_revision="a" board_part="part0" schema_version="1.1" vendor="myirtech.com" version="1.0" preset_file="preset.xml">
+
+  <part_info part_name="xc7z020clg400-1" jtag_position="1" silicon_version="1.0" />
+  <board_info description="Z-turn Board" display_name="Z-turn Board" url="http://www.myirtech.com"/>
+
+  <interfaces>
+    <interface mode="master" name="btns_bits" type="xilinx.com:interface:gpio_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TRI_I" physical_port="btns_5bits_tri_i"/>
+      </port_maps>
+    </interface>
+    <interface mode="master" name="leds_bits" type="xilinx.com:interface:gpio_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TRI_O" physical_port="leds_8bits_tri_o"/>
+      </port_maps>
+    </interface>
+    <interface mode="master" name="ps7_fixedio" type="xilinx.com:display_processing_system7:fixedio_rtl:1.0" preset_proc_name="ps7_preset">
+    </interface>
+    <interface mode="master" name="sws_bits" type="xilinx.com:interface:gpio_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TRI_I" physical_port="sws_8bits_tri_i"/>
+      </port_maps>
+    </interface>
+    <interface mode="slave" name="sys_clock" type="xilinx.com:signal:clock_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CLK" physical_port="sys_clk"/>
+      </port_maps>
+      <parameters>
+        <parameter name="frequency" value="100000000"/>
+      </parameters>
+    </interface>
+  </interfaces>
+
+  <ports>
+    <port dir="in" left="0" name="btns_bits_tri_i" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS25" loc="B13"/>
+      </pins>
+    </port>
+    <port dir="out" left="5" name="leds_bits_tri_o" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS33" loc="E6"/>
+        <pin index="1" iostandard="LVCMOS33" loc="B5"/>
+        <pin index="2" iostandard="LVCMOS33" loc="R14"/>
+        <pin index="3" iostandard="LVCMOS33" loc="Y16"/>
+        <pin index="4" iostandard="LVCMOS33" loc="Y17"/>
+      </pins>
+    </port>
+    <port dir="in" left="4" name="sws_bits_tri_i" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS25" loc="R19"/>
+        <pin index="1" iostandard="LVCMOS25" loc="T19"/>
+        <pin index="2" iostandard="LVCMOS25" loc="G14"/>
+        <pin index="3" iostandard="LVCMOS25" loc="J15"/>
+      </pins>
+    </port>
+    <port dir="in" name="sys_clk">
+      <pins>
+        <pin iostandard="LVCMOS33" loc="U14"/>
+      </pins>
+    </port>
+  </ports>
+
+</board_part>

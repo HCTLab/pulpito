@@ -1,20 +1,20 @@
 # PULPito
 
-PULPito is a hardware platform, based on [PULPino platform](https://www.pulp-platform.org), 
-used to develop new hybrid operating systems where assembly code from ARM and RiscV architectures 
+PULPito is a hardware platform, based on [PULPino platform](https://www.pulp-platform.org),
+used to develop new hybrid operating systems where assembly code from ARM and RiscV architectures
 can coexist in the same binary (two ISAs into a single binary).
 
-PULPito can be deployed in a [ZTurn board](http://www.myirtech.com/list.asp?id=502) which includes 
-a Zynq XC7Z020 chipset, containing two Cortex-A9 ARM processors (in the silicon) and a 
-[Zery-Riscy](https://github.com/pulp-platform/zero-riscy) (RiscV RV32IMC) processor in the 
+PULPito can be deployed in a [ZTurn board](http://www.myirtech.com/list.asp?id=502) which includes
+a Zynq XC7Z020 chipset, containing two Cortex-A9 ARM processors (in the silicon) and a
+[Zery-Riscy](https://github.com/pulp-platform/zero-riscy) (RiscV RV32IMC) processor in the
 programmable logic.
 
-PULPito, as well as its parent PULPino, contains a broad set of peripherals, including I2S, I2C, 
-SPI and UART. The platform internal devices can be accessed from outside via JTAG and SPI which 
-allows pre-loading RAMs with executable code. All platform processors (ARM and RiscV) can access 
+PULPito, as well as its parent PULPino, contains a broad set of peripherals, including I2S, I2C,
+SPI and UART. The platform internal devices can be accessed from outside via JTAG and SPI which
+allows pre-loading RAMs with executable code. All platform processors (ARM and RiscV) can access
 all resources in the platform with a flat addressing mode.
 
-This work will be presented in [JCER2018](http://www.jornadassarteco.org/descripcion/?anyo=2018&simposio=jcer2018).
+This work was presented in [JCER2018](http://www.jornadassarteco.org/descripcion/?anyo=2018&simposio=jcer2018).
 
 ## Getting Started
 
@@ -37,8 +37,8 @@ PULPito has the following requirements:
 
    A) Switch working directory where project will be created with a 'cd' TCL command:
       > cd projects/wherever
-      
-   B) Press "Tools / Run Tcl Script...". 
+
+   B) Press "Tools / Run Tcl Script...".
       Please choose "fpga/vivado/project/pulpito.tcl" and press "OK".
 
 4. Add the following design source file (by right-clicking "Add sources.." and then "Add or create design sources"):
@@ -52,7 +52,7 @@ PULPito has the following requirements:
 
 To build a Vivado project from scratch, please follow next steps:
 
-1. Copy all files from 'fpga/vivado/boards/2017.1' folder into your Vivado execution path.
+1. Copy all files from 'fpga/vivado/boards/2017.1' folder into your Vivado installation path at 'data/boards'.
    This folder includes a new template for ZTurn board.
    Create a new blank project based on ZTurn board.
 
@@ -60,7 +60,11 @@ To build a Vivado project from scratch, please follow next steps:
 
    $ git clone --recursive https://github.com/HCTLab/pulpito
 
-3. Add all (source) files from the following paths into your new project. DO NOT ADD SOURCES FROM SUB-DIRECTORIES:
+3. Create a new RTL project and check 'Do not specify sources at this time'.
+   Choose 'Boards' tag and select 'Z-turn' board from the list.
+   Click finish to create the empty project.
+
+4. Add all (source) files from the following paths into your new project. DO NOT ADD SOURCES FROM SUB-DIRECTORIES:
 
    * rtl/adv_dbg_if/rtl
    * rtl/apb_event_unit
@@ -70,7 +74,7 @@ To build a Vivado project from scratch, please follow next steps:
    * rtl/apb_i2c
    * rtl/apb_node
    * rtl/apb_pulpino
-   * rtl/apb_spi_master
+   * rtl/apb_spi_master -> Add only 'spi_master_apb_if.sv' & 'apb_spi_master.svs'
    * rtl/apb_timer
    * rtl/apb_uart
    * rtl/apb2per
@@ -87,14 +91,14 @@ To build a Vivado project from scratch, please follow next steps:
    * rtl/top/components
    * rtl/top/sim
    * rtl/top
-   
-4. Mark following files with 'Verilog header' type (right click over file and then properties)
+
+5. Mark following files with 'Verilog header' type (right click over file and then properties)
 
    * rtl/top/config.sv
    * rtl/top/axi_bus.sv
    * rtl/top/apb_bus.sv
    * rtl/top/debug_bus.sv
-   * rtl/axi_node/defines.sv
+   * rtl/axi_node/defines.v
    * rtl/zriscy/include/zeroriscy_config.sv
    * rtl/zriscy/include/zeroriscy_tracer_defines.sv
    * rtl/adv_dbg_if/rtl/adbg_defines.v
@@ -104,22 +108,22 @@ To build a Vivado project from scratch, please follow next steps:
    * rtl/adv_dbg_if/rtl/adbg_axi_defines.v
    * rtl/apb_event_unit/include/defines_event_unit.sv
    * rtl/zturn/clocking.vh
-   
-5. Add the following 'define' in 'Tools/Settings/Simulation' at 'Verilog options':
+
+6. Add the following 'define' in 'Tools/Settings/Simulation' at 'Verilog options':
 
    TRACE_EXECUTION = 1
 
-6. Add the following option in 'Tools/Settings/Synthesis' at 'Verilog options':
+7. Add the following option in 'Tools/Settings/Synthesis' at 'Verilog options':
 
    -verilog_define PULP_FPGA_EMUL=1
 
-7. Select 'pulpemu_top' as the top module to be synthesized.
-   Select 'pulpsim_top' as the top module to be simulated.
+8. Select 'pulpemu_top' as the top module to be synthesized (Tools/General).
+   Select 'pulpsim_top' as the top module to be simulated (Tools/Synthesis).
 
-8. Add the component block 'fpga/vivado/zynq_ps/zynq_ps' into you project (make a copy inside the project, avoid auto-update option)
+9. Add the component block 'fpga/vivado/zynq_ps/zynq_ps' into you project (make a copy inside the project, avoid auto-update option)
    You can also create this design block from scratch if you preserve same interface names.
 
-9. Remove unreferenced files.
+10. Remove unreferenced files.
 
 ## Contributing
 
@@ -127,8 +131,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. 
-For the versions available, see the [tags on this repository](https://github.com/HCTLab/pulpito/tags). 
+We use [SemVer](http://semver.org/) for versioning.
+For the versions available, see the [tags on this repository](https://github.com/HCTLab/pulpito/tags).
 
 ## Authors
 
@@ -139,7 +143,7 @@ For the versions available, see the [tags on this repository](https://github.com
 
 ## License
 
-This project is licensed under the [SolderPad open source license](http://solderpad.org/licenses/SHL-0.51/) - 
+This project is licensed under the [SolderPad open source license](http://solderpad.org/licenses/SHL-0.51/) -
 see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
